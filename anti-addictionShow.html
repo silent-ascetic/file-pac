@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>使用提示</title>
+        <style type="text/css">
+            *{margin:0 auto;}
+            #show{width:100%;height:100%;background:url;}
+        </style>
+    </head>
+    
+    <body>
+        <table width=100% height=100%>
+            <tr>
+                <td>
+                    <center>
+                        <font face="times">
+                            <span style="font-size:100px;color:red;font-family:century">
+                                <a id="show" style="text-decoration:none;"></a>
+                            </span>
+                        </font>
+                    </center>
+                </td>
+            </tr>
+        </table>
+        <!-- <h1 id="show" style="text-align:center"></h1> -->
+        <!-- <p id="show"></p> -->
+        <script>
+            var myDate = new Date();
+            var hour = myDate.getHours();
+            var one = "别看视频了,出去运动运动。";
+            var two = "早上8点到晚上8点无法看视频，只能查资料。";
+            if (8 < hour < 20) {
+                document.getElementById("show").innerHTML = one;
+                
+            } else {
+                document.getElementById("show").innerHTML = two;
+            }
+        </script>
+    </body>
+</html>
