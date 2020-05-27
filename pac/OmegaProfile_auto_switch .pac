@@ -44,6 +44,7 @@ var FindProxyForURL = function(init, profiles) {
         if (/(?:^|\.)intel\./.test(host)) return "DIRECT";
         if (/(?:^|\.)aliyun\./.test(host)) return "DIRECT";
         if (/(?:^|\.)ipaddress\.com$/.test(host)) return "DIRECT";
+        if (/(?:^|\.)githubusercontent\./.test(host)) return "DIRECT";
         return "+proxy";
     },
     "+proxy": function(url, host, scheme) {
