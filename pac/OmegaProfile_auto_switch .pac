@@ -47,6 +47,7 @@ var FindProxyForURL = function(init, profiles) {
         if (/(?:^|\.)githubusercontent\./.test(host)) return "DIRECT";
         if (/^a\.maorx\.cn$/.test(host)) return "DIRECT";
         if (/^rthe\.cn$/.test(host)) return "DIRECT";
+        if (/^ascetic\.rthe\.net$/.test(host)) return "DIRECT";
         return "+proxy";
     },
     "+proxy": function(url, host, scheme) {
