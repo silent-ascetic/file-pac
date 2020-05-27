@@ -358,7 +358,7 @@ function FindProxyForURL(url, host){
 	var direct = 'DIRECT;';
 
 	var proxy = '127.0.0.1:80';
-	var block = '0.0.0.0:80';
+	var block = '0.0.0.1:80';
 	
 	if(shExpMatch(host, '10.[0-9]+.[0-9]+.[0-9]+')) return direct;
 	if(shExpMatch(host, '172.[0-9]+.[0-9]+.[0-9]+')) return direct;
@@ -379,7 +379,7 @@ function FindProxyForURL(url, host){
 			if(blackList[i].domain){
 				// block by domain
 				if(shExpMatch(host, blackList[i].domain)){
-					return 'PROXY '+ block +';';
+					return 'PROXY '+ block +';' + 'DIRECT';
 				};
 			};
 		};
